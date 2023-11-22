@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/Tarea3.2/estilos.css">
+    <title>Convertidor de temperatura</title>
+</head>
+<body>
+
+    <h1>Convertir temperaturas</h1>
+    <h3>Hecho por Emmanuel Alicea Rodríguez</h3>
+
+    <input type="text" id="temperatura">
+
+    <br>
+
+    <h3>Elige el valor al que deseas cambiarlo:</h3>
+
+    <input type="button" id="far" value="F°">
+    <input type="button" id="cel" value="C°">
+
+    <br>
+    <br>
+    <hr>
+    <br>
+
+    <h1 id="valorFinal">0</h1>
+    <h3>Temperatura</h3>
+
+    <script>
+
+        const input = document.getElementById('temperatura');
+        const btnCelsius = document.getElementById('cel');
+        const btnFahrenheit = document.getElementById('far');
+        const result = document.getElementById('valorFinal');
+
+        function toCelsius(tempFahrenheit) {
+            return (tempFahrenheit - 32) * (5 / 9);
+        }
+
+        function toFahrenheit(tempCelsius) {
+            return (tempCelsius * 9 / 5) + 32;
+        }
+
+        btnCelsius.addEventListener('click', () => {
+            const temp = parseFloat(input.value);
+            if (!isNaN(temp)) {
+                const tempCelsius = toCelsius(temp);
+                result.textContent = tempCelsius.toFixed(2) + '°C';
+            } else {
+                result.textContent = 'Ingrese una temperatura válida';
+            }
+        });
+
+        btnFahrenheit.addEventListener('click', () => {
+            const temp = parseFloat(input.value);
+            if (!isNaN(temp)) {
+                const tempFahrenheit = toFahrenheit(temp);
+                result.textContent = tempFahrenheit.toFixed(2) + '°F';
+            } else {
+                result.textContent = 'Ingrese una temperatura válida';
+            }
+        });
+
+    </script>
+
+    <!-- Emmanuel Alicea Rodríguez
+    Tarea 3.2 PROG 2390L -->
+
+</body>
+</html>

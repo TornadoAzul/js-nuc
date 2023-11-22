@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/14_03_2023/estilos.css">
+    <title>¡Genial!</title>
+</head>
+<body>
+
+    <script>
+
+        let libros = 50;
+        let bulto = 40;
+        let ropa = 200;
+        let materiales = 100;
+
+        var total = libros + ropa + bulto + materiales
+        var ivu = total * .115 + total;
+
+        function ivuf (){
+            return total * .115 + total;
+        }
+
+    </script>
+
+    <h2>
+        Lista de materiales:
+    </h2>
+    <ul>
+        <li>
+            Libros: <b>$50</b>
+        </li>
+        <li>
+            Bulto: <b>$40</b>
+        </li>
+        <li>
+            Ropa: <b>$200</b>
+        </li>
+        <li>
+            Materiales escolares: <b>$100</b>
+        </li>
+    </ul>
+
+    <br>
+    <br>
+    <br>
+
+    <h1>
+        <script>
+            document.write("$"+(total))
+        </script>
+    </h1>
+    <h3>
+        Total
+    </h3>
+
+    <br>
+    <br>
+    <br>
+
+
+    <h1>
+        <script>
+            document.write("$"+(ivuf()))
+        </script>
+    </h1>
+    <h3>
+        Total + IVU
+    </h3>
+
+
+
+</body>
+</html>

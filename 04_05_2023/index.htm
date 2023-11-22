@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/14_03_2023/estilos.css">
+    <title>Ejemplo de Array 1</title>
+</head>
+<body>
+
+    <br>
+
+    <h1>
+        Autos preferidos.
+    </h1>
+    <br>
+    <h3>
+        Este es mi primer ejemplo de Array.
+    </h3>
+
+    <br>
+    <hr>
+    <br>
+
+    <h2 id="id1"></h2>
+
+    <br>
+
+    <input type="text">
+
+    <script>
+
+        let carros = ["Toyota", "Tesla", "Lumima"];
+        document.getElementById("id1").innerHTML = carros;
+
+        function instertar() {
+            carros[3] = document.getElementById("texto").value;
+            let cantidad = carros.length;
+            document.getElementById("id2").innerHTML = carros + "<br>" + "El total de autos es " + cantidad;
+        }
+
+    </script>
+
+</body>
+</html>
+
+<!-- Emmanuel Alicea Rodríguez
+Tarea 2.2 PROG 2390L -->

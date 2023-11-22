@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/Tarea4.2/estilos.css">
+    <title>Tarea 4.2</title>
+</head>
+<body>
+
+    <h1>Manatí Times</h1>
+    <hr><br>
+    <h3>
+        Recibe el periódico diario de Manatí Times.
+    </h3>
+    <br>
+    <h4>
+        Nombre
+    </h4>
+    <input type="text" name="" id="nombre">
+    <br><br>
+    <h4>
+        Dirección de correo electrónico
+    </h4>
+    <input type="email" name="" id="email">
+    <br><br>
+    <h4>
+        Contraseña
+    </h4>
+    <input type="password" name="" id="pass">
+    <br><br>
+    <h4>
+        ¿Cómo nos dirigimos a usted?
+    </h4>
+    <select id="saludo">
+        <option value="" disabled selected>Seleccionar saludo</option>
+        <option>Sr.</option>
+        <option>Sra.</option>
+    </select>
+    <br><br><hr><br>
+    <input type="button" value="Unirse" onclick="unirse()">
+    <br>
+    <br>
+    <br>
+
+    <script>
+        function unirse() {
+            var nombre = document.getElementById("nombre").value;
+            var email = document.getElementById("email").value;
+            var pass = document.getElementById("pass").value;
+            var saludo = document.getElementById("saludo").value;
+
+            // Validar campos
+            if (nombre === "" || email === "" || pass === "") {
+                alert("¡Por favor, llena todos los campos y disfruta de Manatí Times!");
+                return;
+            }
+
+            // Validar contraseña
+            if (pass.length < 8) {
+                alert("Por favor, la contraseña debe tener al menos 8 caracteres.");
+                return;
+            }
+
+            if (!/[!@#$%^&*(),.?":{}|<>]/.test(pass)) {
+                alert("Por favor, pon un símbolo en la contraseña.");
+                return;
+            }
+
+            if (!/[A-Z]/.test(pass)) {
+                alert("Por favor, incluye al menos una letra mayúscula en la contraseña.");
+                return;
+            }
+
+            if (!/[a-z]/.test(pass)) {
+                alert("Por favor, incluye al menos una letra minúscula en la contraseña.");
+                return;
+            }
+
+            if (!/[0-9]/.test(pass)) {
+                alert("Por favor, incluye al menos un número en la contraseña.");
+                return;
+            }
+
+            // Todo ha sido validado
+            alert(saludo + " " + nombre + ", usted ha sido registrado en Manatí Times.");
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+:root {
+
+    --negro: #202020;
+    --blanco: #f8f8f8;
+    --gris: #c9c9c9;
+    --naranja: #FE8045;
+    --rojo: #FF353B;
+    --azul: #485BFF;
+
+}
+
+body {
+
+    font-family: 'League Spartan', sans-serif;
+    line-height: 1.2;
+    background-color: var(--blanco);
+    color: var(--negro);
+
+}
+
+h1 {
+
+    font-size: 55px;
+    margin: 0;
+
+}
+
+h2 {
+
+    font-size: 40px;
+    font-weight: 400;
+    color: var(--azul);
+    margin: 0;
+
+
+}
+
+h3 {
+
+    font-size: 30px;
+    font-weight: 300;
+    color: var(--negro);
+    margin: 0;
+
+}
+
+h4 {
+
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--negro);
+    margin: 0;
+
+}
+
+hr {
+
+    max-width: 80vw;
+    color: var(--rojo);
+
+}
+
+input {
+
+    background-color: var(--rojo);
+    color: var(--negro);
+    border: none;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 20px;
+    margin-top: 20px;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 15px;
+
+}
+select {
+
+    background-color: var(--rojo);
+    color: var(--negro);
+    border: none;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 20px;
+    margin-top: 20px;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 15px;
+
+}
+
+h4 {
+
+    color: var(--azul);
+
+}
+
+button {
+
+    background-color: var(--rojo);
+    color: var(--negro);
+    border: none;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 20px;
+    margin-top: 20px;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 15px;
+
+}
+
+.carousel {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    overflow-x: scroll;
+    white-space: nowrap;
+}
+
+.carousel-buttons {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    padding: 10px;
+}
+
+.carousel-buttons button {
+    padding: 5px 10px;
+}

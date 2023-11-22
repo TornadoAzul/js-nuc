@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/23_05_2023/estilos.css">
+    <title>Acceder</title>
+</head>
+<body>
+
+    <h1>Ejercicios de cálculos</h1>
+    <div class="carousel">
+        <div class="carousel-buttons">
+            <a href="/23_05_2023/index.htm">
+                <button>Contraseña</button>
+            </a>
+            <a href="/23_05_2023/perimetroarea.htm">
+                <button>Perímetro y área</button>
+            </a>
+            <a href="/23_05_2023/calculadora.htm">
+                <button>Sumar y restar</button>
+            </a>
+            <a href="/23_05_2023/porciento.htm">
+                <button>Obtener porcentaje</button>
+            </a>
+        </div>
+    </div>
+    <hr><br>
+    <h3>Suma y resta.</h3>
+    <br>
+    <h4>Primer número</h4>
+    <input type="text" name="numero1" id="numero1">
+    <br><br>
+    <h4>Segundo número</h4>
+    <input type="text" name="numero2" id="numero2">
+    <br><br>
+    <h4>Operación</h4>
+    <select id="operacion">
+        <option value="sumar">Sumar</option>
+        <option value="restar">Restar</option>
+    </select>
+    <br><br><hr><br>
+
+    <input type="button" value="Calcular" onclick="calcular()">
+    <br>
+    <br>
+    <br>
+
+    <script>
+        function calcular() {
+            var numero1 = parseFloat(document.getElementById("numero1").value);
+            var numero2 = parseFloat(document.getElementById("numero2").value);
+            var operacion = document.getElementById("operacion").value;
+            var resultado;
+
+            if (operacion === "sumar") {
+                resultado = numero1 + numero2;
+            } else if (operacion === "restar") {
+                resultado = numero1 - numero2;
+            }
+
+            alert("El resultado es: " + resultado + ".");
+        }
+    </script>
+
+</body>
+</html>

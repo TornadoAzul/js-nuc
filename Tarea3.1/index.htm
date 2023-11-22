@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/Tarea3.1/estilos.css">
+    <title>Gastos médicos</title>
+</head>
+<body>
+
+    <br>
+    <br>
+
+    <h1>
+        Tus gastos
+    </h1>
+    <h3>
+        en Manatí Medical Center
+    </h3>
+
+    <p>
+        En Manatí Medical Center sabemos que puede llegar a ser bastante cara su estadía, por ello aquí te ofrecemos una herramienta gratuita donde puedas calcular tus gastos en conjunto. <b>Recuerda tener todos los datos a la mano</b>.
+    </p>
+
+    <br>
+    <hr>
+    <br>
+
+    <h2>
+        Costo de consulta.
+    </h2>
+    <p>
+        Indique el costo de consulta bruto (Sin importar cuanto pagó el seguro ni usted).
+    </p>
+    <input type="text" id="bruto">
+
+    <br>
+
+    <h2>
+        Costo de alimentos.
+    </h2>
+    <p>
+        Indica el costo de los alimentos que ingerió el paciente durante la estadía.
+    </p>
+    <input type="text" id="alimentos">
+
+    <br>
+
+    <h2>
+        Costo de estacionamiento.
+    </h2>
+    <p>
+        Indique el monto que usted pagó haciendo uso de nuestro estacionamiento.
+    </p>
+
+    <input type="text" id="estacionamiento">
+
+    <br>
+    <br>
+
+    <hr>
+
+    <br>
+
+    <h3>
+        Cubierto por el plan.
+    </h3>
+
+    <p>
+        Indica cuanto es el valor que el plan médico pagó/pagará por el proceso médico.
+    </p>
+
+    <input type="text" id="cubierto">
+
+    <br>
+
+    <br>
+
+    <input type="button" value="¡Calcular!" onclick="obtenerValor()">
+
+    <br>
+    <br>
+    <br>
+    <hr>
+    <br>
+    <br>
+
+    <h1 id="valorFinal">
+        0
+    </h1>
+    <h3>
+        Usted pagará / pagó
+    </h3>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+
+    <script>
+        const botonCalcular = document.querySelector("input[type='button']");
+        botonCalcular.addEventListener("click", obtenerValor);
+    
+        function obtenerValor() {
+
+            const input1 = document.getElementById("bruto").value;
+            const input2 = document.getElementById("alimentos").value;
+            const input3 = document.getElementById("estacionamiento").value;
+            const cubierto = document.getElementById("cubierto");
+
+            let gastos = [Number(input1), Number(input2), Number(input3)];
+            let costo = 0;
+
+            for (let i = 0; i < gastos.length; i++) {
+                costo += gastos[i];
+            }
+
+            const resultado = costo - cubierto.value;
+
+            const resultadoString = "$" + resultado;
+
+            document.getElementById("valorFinal").innerHTML = resultadoString;
+        }
+    </script>
+
+
+</body>
+</html>
+
+<!-- Emmanuel Alicea Rodríguez
+Tarea 3.1 PROG 2390L -->

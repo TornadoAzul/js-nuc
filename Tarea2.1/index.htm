@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/14_03_2023/estilos.css">
+    <title>Tarea 2.1</title>
+</head>
+<body>
+
+    <script>
+
+        let totalProductos = 0;
+        let objetos = document.getElementsByTagName("input");
+
+        function calcular() {
+            for (var i = 0; i < 5; i++) {
+                if (objetos[i].checked) {
+                    totalProductos += (objetos[i].value * 1);
+                }
+            }
+            document.getElementById("total").innerHTML = "El total de tu orden es: $" + totalProductos + ".00";
+        }
+
+    </script>
+
+    <h2>Productos a escoger</h2>
+    <br><br>
+
+    <form>
+
+        <input type="checkbox" id="checkbox1" value="600">HP Laptop $600<br>
+        <input type="checkbox" id="checkbox2" value="600">MacBook $1,200<br>
+        <input type="checkbox" id="checkbox3" value="600">Samsung Chromebook $300<br>
+        <input type="checkbox" id="checkbox4" value="600">iPad $400<br>
+        <input type="button" id="boton1" value="Calcular" onclick="calcular()">
+        <input type="reset" value="Borrar">
+
+    </form>
+
+    <p id="total"></p>
+
+</body>
+</html>
+
+<!-- Emmanuel Alicea Rodríguez
+Tarea 2.1 PROG 2390L -->

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/23_05_2023/estilos.css">
+    <title>Acceder</title>
+</head>
+<body>
+
+    <h1>Ejercicios de cálculos</h1>
+    <div class="carousel">
+        <div class="carousel-buttons">
+            <a href="/23_05_2023/index.htm">
+                <button>Contraseña</button>
+            </a>
+            <a href="/23_05_2023/perimetroarea.htm">
+                <button>Perímetro y área</button>
+            </a>
+            <a href="/23_05_2023/calculadora.htm">
+                <button>Sumar y restar</button>
+            </a>
+            <a href="/23_05_2023/porciento.htm">
+                <button>Obtener porcentaje</button>
+            </a>
+        </div>
+    </div>
+    <hr><br>
+    <h3>Descuento.</h3>
+    <br>
+    <h4>¿Cuánto debe pagar?</h4>
+    <input type="text" name="numero1" id="pago">
+    <br><br>
+    <h4>¿Cuál es su edad?</h4>
+    <input type="text" name="numero2" id="edad">
+    <br><br><hr><br>
+
+    <input type="button" value="Calcular descuento" onclick="calcular()">
+    <br>
+    <br>
+    <br>
+
+    <h1 id="resultado">$0</h1>
+    <h3>Descuento</h3>
+    <br><br><br><br>
+
+    <script>
+        function calcular() {
+            var pagoInput = document.getElementById("pago");
+            var edadInput = document.getElementById("edad");
+            var pago = parseFloat(pagoInput.value);
+            var edad = parseInt(edadInput.value);
+
+            var descuento = 0;
+            if (edad < 18) {
+                descuento = 0.15; // 15% de descuento
+            } else if (edad >= 18 && edad <= 65) {
+                descuento = 0.10; // 10% de descuento
+            } else if (edad > 65) {
+                descuento = 0.20; // 20% de descuento
+            }
+
+            var descuentoAplicado = pago * descuento;
+            var totalPagar = pago - descuentoAplicado;
+
+            var resultadoElement = document.getElementById("resultado");
+            resultadoElement.innerHTML = "$" + totalPagar.toFixed(2);
+        }
+    </script>
+
+</body>
+</html>

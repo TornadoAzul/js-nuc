@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+    <!-- Tarea 1.1 - Emmanuel Alicea Rodríguez -->
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/Tarea1.2/estilos.css">
+    <title>Tarea 1.1</title>
+</head>
+<body>
+    <article>
+        <h1>
+            Cursos matriculados
+        </h1>
+        <script>
+            let código1 = "PROG 3375L";
+            let curso1 = "Java";
+            let credito = 3
+            let código2 = "PROG 2390L";
+            let curso2 = "JavaScript";
+            let código3 = "STAT 2000";
+            let curso3 = "Estadística"
+
+            let total = credito * 3;
+
+            function mensaje() {
+                alert("Tus créditos son un total de " + total ,".");
+            }
+        </script>
+
+        <br><br>
+
+        <table>
+            <tr>
+                <td>Código</td>
+                <td>Curso</td>
+                <td>Credito</td>
+            </tr>
+            <tr>
+                <td><script>document.write(código1)</script></td>
+                <td><script>document.write(curso1)</script></td>
+                <td><script>document.write(credito)</script></td>
+            </tr>
+            <tr>
+                <td><script>document.write(código2)</script></td>
+                <td><script>document.write(curso2)</script></td>
+                <td><script>document.write(credito)</script></td>
+            </tr>
+            <tr>
+                <td><script>document.write(código3)</script></td>
+                <td><script>document.write(curso3)</script></td>
+                <td><script>document.write(credito)</script></td>
+            </tr>
+        </table>
+    </article>
+
+    <form>
+        <input type="button" name="" id="" value="Calcular créditos" onclick="mensaje();">
+    </form>
+</body>
+</html>

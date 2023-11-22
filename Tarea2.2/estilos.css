@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+:root {
+
+    --negro: #202020;
+    --blanco: #f8f8f8;
+    --gris: #c9c9c9;
+    --naranja: #FE8045;
+
+}
+
+body {
+
+    font-family: 'Ubuntu', sans-serif;
+    background-color: var(--negro);
+    color: var(--blanco);
+
+}
+
+h1 {
+
+    font-size: 55px;
+    margin: 0;
+
+}
+
+h2 {
+
+    font-size: 40px;
+    font-weight: 400;
+    color: var(--naranja);
+    margin: 0;
+
+
+}
+
+h3 {
+
+    font-size: 30px;
+    font-weight: 300;
+    color: var(--gris);
+    margin: 0;
+
+}
+
+hr {
+
+    max-width: 80vw;
+    color: var(--naranja);
+
+}
+
+input {
+
+    background-color: var(--naranja);
+    color: var(--negro);
+    border: none;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 20px;
+    margin-top: 20px;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 15px;
+
+}
+
+h4 {
+
+    color: var(--naranja);
+
+}
+
+button {
+
+    background-color: var(--naranja);
+    color: var(--negro);
+    border: none;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 20px;
+    margin-top: 20px;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 15px;
+
+}

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/14_03_2023/estilos.css">
+    <title>Tarea 2.2</title>
+</head>
+<body>
+
+    <script>
+
+        alert("¡Indica todos los productos!")
+
+        let objetos = document.getElementsByTagName("input");
+
+        function procesoEntrada() {
+            let lista = "";
+            for (var i = 0; i < 5; i++) {
+                lista += (objetos[i].value + "<br>");
+                document.getElementById("lista").innerHTML = lista;
+            }
+
+        }
+
+    </script>
+
+    <h2>Productos a escoger</h2>
+    <br><br>
+
+    <form>
+
+        <h3>Objeto 1</h3>
+        <input type="textbox" name="txt1"><br>
+        <h3>Objeto 2</h3>
+        <input type="textbox" name="txt2"><br>
+        <h3>Objeto 3</h3>
+        <input type="textbox" name="txt3"><br>
+        <h3>Objeto 4</h3>
+        <input type="textbox" name="txt4"><br>
+        <h3>Objeto 5</h3>
+        <input type="textbox" name="txt5"><br><br>
+        <input type="button" id="botton" value="Mostrar" onclick="procesoEntrada()">
+
+    </form>
+
+    <p id="lista"></p>
+
+</body>
+</html>
+
+<!-- Emmanuel Alicea Rodríguez
+Tarea 2.2 PROG 2390L -->

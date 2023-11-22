@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/23_05_2023/estilos.css">
+    <title>Acceder</title>
+</head>
+<body>
+
+    <h1>Ejercicios de calculos</h1>
+    <div class="carousel">
+        <div class="carousel-buttons">
+            <a href="/23_05_2023/index.htm">
+                <button>Contraseña</button>
+            </a>
+            <a href="/23_05_2023/perimetroarea.htm">
+                <button>Perímetro y área</button>
+            </a>
+            <a href="/23_05_2023/calculadora.htm">
+                <button>Sumar y restar</button>
+            </a>
+            <a href="/23_05_2023/porciento.htm">
+                <button>Obtener porcentaje</button>
+            </a>
+        </div>
+    </div>
+    <hr><br>
+    <h3>
+        Escriba la contraseña.
+    </h3>
+    <br>
+    <h4>
+        Contraseña
+    </h4>
+    <input type="password" name="" id="pass">
+    <br><br><hr><br>
+    <input type="button" value="Validar" onclick="acceder()">
+    <br>
+    <br>
+    <br>
+
+
+    <script>
+        function acceder() {
+            var password = document.getElementById("pass").value;
+            var errors = [];
+    
+            var hasEightCharacters = password.length >= 8;
+            var hasNumbers = /[0-9]/.test(password);
+            var hasUppercase = /[A-Z]/.test(password);
+            var hasLowercase = /[a-z]/.test(password);
+            var hasSpecialCharacter = /[!@#$%^&*()\-_=+{}[\]\\|:;"'<>,.?]/.test(password);
+
+            if (!hasEightCharacters) {
+                errors.push("Debe tener al menos 8 caracteres.");
+            }
+            if (!hasNumbers) {
+                errors.push("Debe contener al menos un número.");
+            }
+            if (!hasUppercase) {
+                errors.push("Debe contener al menos una letra mayúscula.");
+            }
+            if (!hasLowercase) {
+                errors.push("Debe contener al menos una letra minúscula.");
+            }
+            if (!hasSpecialCharacter) {
+                errors.push("Debe contener al menos un símbolo especial.");
+            }
+    
+            if (errors.length > 0) {
+                var errorMessage = "La contraseña no es válida. Asegúrese de:";
+                for (var i = 0; i < errors.length; i++) {
+                    errorMessage += "\n- " + errors[i];
+                }
+                alert(errorMessage);
+            } else {
+                alert("La contraseña es válida.");
+            }
+        }
+    </script>
+
+
+
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/ProyectoFinal/estilos.css">
+    <title>Proyecto Final</title>
+</head>
+<body>
+    <br><br>
+    <h1>BBTA</h1>
+    <h2>Banco de Barceloneta</h2>
+    <br><br>
+    <h3>
+        Calcula tus intereses
+    </h3>
+    <br><br>
+    <h4>
+        Saldo actual
+    </h4>
+    <input type="number" name="" id="saldo">
+    <br>
+    <h4>
+        Tasa de intereses
+    </h4>
+    <select id="tasa">
+        <option value="" disabled selected>Seleccionar</option>
+        <option>2%</option>
+        <option>3%</option>
+        <option>4%</option>
+    </select><br><br><hr><br>
+    <input type="button" value="Calcular" onclick="calcular()">
+    <br>
+    <br>
+    <br>
+
+    <script>
+        function calcular() {
+          var saldoInput = document.getElementById("saldo").value;
+          var tasaInput = document.getElementById("tasa").value;
+
+          // Verificar si los campos están llenos correctamente
+          if (saldoInput === "" || tasaInput === "") {
+            alert("Ingrese los datos correctamente");
+            return;
+          }
+
+          var tasaPorcentaje = parseFloat(tasaInput.slice(0, -1));
+
+          var resultado = parseFloat(saldoInput) * (1 + tasaPorcentaje / 100);
+
+          alert("Tu saldo con la tasa de interés del " + tasaPorcentaje + "% es $" + resultado.toFixed(2));
+
+        }
+        </script>
+
+</body>
+</html>

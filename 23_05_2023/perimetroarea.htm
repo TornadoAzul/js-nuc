@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/23_05_2023/estilos.css">
+    <title>Acceder</title>
+</head>
+<body>
+
+    <h1>Ejercicios de cálculos</h1>
+    <div class="carousel">
+        <div class="carousel-buttons">
+            <a href="/23_05_2023/index.htm">
+                <button>Contraseña</button>
+            </a>
+            <a href="/23_05_2023/perimetroarea.htm">
+                <button>Perímetro y área</button>
+            </a>
+            <a href="/23_05_2023/calculadora.htm">
+                <button>Sumar y restar</button>
+            </a>
+            <a href="/23_05_2023/porciento.htm">
+                <button>Obtener porcentaje</button>
+            </a>
+        </div>
+    </div>
+    <hr><br>
+    <h3>
+        Calcular perímetro y área.
+    </h3>
+
+    <br>
+
+    <h4>
+        Base
+    </h4>
+    <input type="text" id="base">
+    <br><br><hr><br>
+    <h4>
+        Altura
+    </h4>
+    <input type="text" id="altura">
+    <br><br><hr><br>
+    <input type="button" value="Calcular" onclick="calcular()">
+    <br>
+    <br>
+    <br>
+
+    <h1 id="perimetro">
+        0
+    </h1>
+    <h3>Perímetro</h3>
+    <br><br>
+    <h1 id="area">
+        0
+    </h1>
+    <h3>Área</h3>
+    <br><br>
+
+
+    <script>
+    function calcular() {
+        var base = parseFloat(document.getElementById("base").value);
+        var altura = parseFloat(document.getElementById("altura").value);
+
+        var perimetro = 2 * (base + altura);
+        var area = base * altura;
+
+        document.getElementById("perimetro").innerText = perimetro;
+        document.getElementById("area").innerText = area;
+    }
+    </script>
+
+</body>
+</html>

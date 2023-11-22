@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/14_03_2023/estilos.css">
+    <title>¡Genial!</title>
+</head>
+<body>
+
+    <script>
+
+        function ventana() {
+            let age = document.getElementById("edad").value;
+            let name = document.getElementById("nombre").value;
+
+            if (age < 21) {
+                alerta = "menor";
+                mensaje()
+            } if (age < 1 ) {
+                alert("Es invalida tu edad.");
+            } else {
+                alerta = "mayor";
+                mensaje()
+            }
+
+            function mensaje() {
+            alert("¡Hola, " + name + "! Tienes " + age + " años de edad. Eres " + alerta + " de edad.");
+        }
+
+        }
+
+    </script>
+
+    <h2>Información de usuario</h2>
+    <br><br>
+
+    <form>
+        <h3>¡Hola! ¡Escriba su nombre aquí!</h3>
+        <input type="text" id="nombre">
+        <h3>Escriba su edad, por favor.</h3>
+        <input type="text" id="edad">
+        <br>
+        <hr>
+        <br>
+        <input type="button" value="Mostrar información" onclick="ventana()">
+
+    </form>
+
+
+</body>
+</html>
